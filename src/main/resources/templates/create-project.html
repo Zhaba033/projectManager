@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Создать новый проект</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" th:href="@{/css/main.css}">
+    </head>
+    <body>
+        <form method="POST" th:action="@{/create-project/submit}">
+            <p class="test">Название проекта</p>
+            <input type="text" name="name" maxlength="255" required>
+            <p>Описание проекта (до 255 символов)</p>
+            <textarea name="description" rows="5" cols="20" required></textarea>
+            <button type="submit">Создать</button>
+        </form>
+    </body>
+</html>
